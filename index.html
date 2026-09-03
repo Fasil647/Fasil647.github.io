@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fasil Kassahun — Graphic Design Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181818;
+    --paper:#ffffff;
+    --card:#F4F3EF;
+    --indigo:#2E3A8C;
+    --indigo-tint:#E7E9F6;
+    --amber:#E2A73E;
+    --amber-tint:#FBF0DA;
+    --muted:#6B6A66;
+    --border:#E3E1D9;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:56px 28px 80px;}
+  h1,h2,h3{font-family:'Space Grotesk', sans-serif;margin:0;}
+
+  /* Hero */
+  .hero{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid var(--border);}
+  .hero-mark{width:64px;height:64px;background:var(--indigo);flex-shrink:0;position:relative;}
+  .hero-mark::after{content:"";position:absolute;width:20px;height:20px;background:var(--amber);right:-10px;bottom:-10px;}
+  .hero-text h1{font-size:38px;font-weight:700;letter-spacing:-0.5px;}
+  .hero-role{font-size:16px;color:var(--indigo);font-weight:500;margin-top:6px;}
+  .hero-contact{margin-top:16px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px;}
+  .hero-contact span{white-space:nowrap;}
+
+  /* Skills */
+  .skills{margin-top:36px;}
+  .skills h2{font-size:14px;font-weight:500;color:var(--muted);margin-bottom:12px;}
+  .chip-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .chip{padding:7px 16px;border:1px solid var(--border);border-radius:20px;font-size:14px;background:var(--card);}
+
+  /* Section headers */
+  .section{margin-top:56px;}
+  .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;}
+  .section-head h2{font-size:22px;}
+  .section-head span{font-size:13px;color:var(--muted);}
+
+  /* Placeholder tiles */
+  .grid{display:grid;gap:14px;}
+  .grid.posters{grid-template-columns:1.1fr 1fr;}
+  .grid.social{grid-template-columns:repeat(3,1fr);}
+  .grid.layout{grid-template-columns:1fr 1fr;}
+  .tile{
+    border:1.5px dashed #B9B7AD;
+    border-radius:6px;
+    background:#FAFAF8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+    padding:18px;
+  }
+  .tile.tall{min-height:280px;}
+  .tile.short{min-height:220px;}
+  .tile.square{min-height:180px;}
+
+  /* About */
+  .about p{font-size:15px;max-width:640px;color:#2c2c2a;}
+
+  /* Footer */
+  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+
+  @media(max-width:600px){
+    .grid.social{grid-template-columns:1fr 1fr;}
+    .grid.posters,.grid.layout{grid-template-columns:1fr;}
+    .hero-text h1{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-mark" aria-hidden="true"></div>
+    <div class="hero-text">
+      <h1>Fasil Kassahun</h1>
+      <div class="hero-role">Junior Graphic Designer</div>
+      <div class="hero-contact">
+        <span>Wello Sefer, Bole, Addis Ababa</span>
+        <span>your.email@example.com</span>
+        <span>+251 9__ ___ ___</span>
+        <span>Instagram / Behance handle</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills">
+    <h2>Tools</h2>
+    <div class="chip-row">
+      <div class="chip">Adobe Photoshop</div>
+      <div class="chip">Adobe Illustrator</div>
+      <div class="chip">Canva</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <h2>Poster design</h2>
+      <span>replace each tile with an image tag</span>
+    </div>
+    <div class="grid posters">
+      <div class="tile tall">Add your best poster here<br>e.g. event or campaign poster</div>
+      <div class="tile tall">Add a second poster here</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <h2>Social media design</h2>
+      <span>square or vertical crops work best</span>
+    </div>
+    <div class="grid social">
+      <div class="tile square">Post 1</div>
+      <div class="tile square">Post 2</div>
+      <div class="tile square">Post 3</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head">
+      <h2>Layout design</h2>
+      <span>brochures, documents, presentation slides</span>
+    </div>
+    <div class="grid layout">
+      <div class="tile short">Add a brochure or document layout</div>
+      <div class="tile short">Add a presentation slide layout</div>
+    </div>
+  </div>
+
+  <div class="section about">
+    <div class="section-head"><h2>About</h2></div>
+    <p>Write two or three sentences about yourself: how you got into design, what kind of work you enjoy most, and what you're looking to grow into as a Junior Graphic Designer.</p>
+  </div>
+
+  <footer>
+    <span>Fasil Kassahun</span>
+    <span>Wello Sefer, Bole · your.email@example.com</span>
+  </footer>
+
+</div>
+</body>
+</html>
