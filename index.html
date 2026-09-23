@@ -44,10 +44,20 @@
   .contact p{font-size:15px;max-width:640px;color:#2c2c2a;margin:0;}
   footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
   @media(max-width:600px){
+    .profile-side{width:145px;}
+    .profile-photo{width:145px;height:180px;}
+    .brand-logo{width:52px;height:52px;}
     .grid.three{grid-template-columns:1fr 1fr;}
     .grid.two{grid-template-columns:1fr;}
     .hero-text h1{font-size:30px;}
   }
+
+  .profile-side{width:180px;position:relative;flex-shrink:0;}
+  .profile-photo{width:180px;height:220px;object-fit:cover;border-radius:18px;display:block;}
+  .brand-logo{position:absolute;width:62px;height:62px;object-fit:contain;background:#fff;border-radius:12px;padding:5px;right:-18px;bottom:-15px;box-shadow:0 8px 24px rgba(0,0,0,.14);}
+  .hero-intro{font-size:15px;line-height:1.65;color:#454540;max-width:620px;margin-top:12px;}
+  .contact-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;font-size:13px;}
+  .contact-links a{color:var(--indigo);font-weight:500;}
 </style>
 </head>
 <body>
@@ -55,6 +65,10 @@
 
   <div class="hero">
     <div class="hero-mark" aria-hidden="true"></div>
+    <div class="profile-side">
+      <img class="profile-photo" src="fasil-profile.jpg" alt="Fasil Kassahun">
+      <img class="brand-logo" src="f-studio-logo.png" alt="F-Studio logo">
+    </div>
     <div class="hero-text">
       <h1>Fasil Kassahun</h1>
       <div class="hero-role">Graphic Designer · Visual Content · Branding</div>
@@ -63,6 +77,14 @@
         <span>Addis Ababa, Ethiopia</span>
         <span>Phone: +251 920 593 501</span>
       </div>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:Fslksshn@gmail.com">Email</a>
+      <a href="https://wa.me/251920593501">WhatsApp</a>
+      <a href="https://instagram.com/fasil_Og106">Instagram</a>
+      <a href="https://www.linkedin.com/in/fasil-kasahun-1a3a60341/">LinkedIn</a>
+      <a href="https://github.com/Fasil647">GitHub</a>
+      <a href="https://t.me/Fasil105">Telegram</a>
     </div>
   </div>
 
@@ -120,13 +142,13 @@
     </div>
     <div class="grid two" style="margin-top:14px;">
       <div><img class="piece" src="greenpath-linkedin-post.png" alt="GreenPath LinkedIn post"><div class="cap">LinkedIn post — GreenPath</div></div>
-      <div><img class="piece" src="sbu-basketball-branding.webp" alt="Snatchback University basketball team logo and branding"><div class="cap">Sports team logo & branding — Snatchback University (SBU)</div></div>
+      <div><img class="piece" src="sbu-basketball-branding.png" alt="Snatchback University basketball team logo and branding"><div class="cap">Sports team logo & branding — Snatchback University (SBU)</div></div>
     </div>
   </div>
 
   <div class="section about">
     <div class="section-head"><h2>About</h2></div>
-    <p>I got into graphic design through my interest in visual communication and creating designs that make ideas clear and engaging. I enjoy working on social media graphics, posters, branding, and digital content, and I'm looking to grow as a Junior Graphic Designer by improving my design skills, learning from experienced designers, and working on real projects.</p>
+    <p>I turn ideas into clear visual identities, campaign graphics, and digital content that help brands communicate with confidence. I enjoy working on social media graphics, posters, branding, and digital content, and I'm looking to grow as a Graphic Designer | Branding &amp; Digital Content by improving my design skills, learning from experienced designers, and working on real projects.</p>
   </div>
 
   <div class="section contact">
