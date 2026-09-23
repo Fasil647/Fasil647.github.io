@@ -12,74 +12,38 @@
     --paper:#ffffff;
     --card:#F4F3EF;
     --indigo:#2E3A8C;
-    --indigo-tint:#E7E9F6;
     --amber:#E2A73E;
-    --amber-tint:#FBF0DA;
     --muted:#6B6A66;
     --border:#E3E1D9;
   }
   *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    line-height:1.6;
-  }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter', sans-serif;line-height:1.6;}
   .wrap{max-width:880px;margin:0 auto;padding:56px 28px 80px;}
   h1,h2,h3{font-family:'Space Grotesk', sans-serif;margin:0;}
-
-  /* Hero */
   .hero{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid var(--border);}
   .hero-mark{width:64px;height:64px;background:var(--indigo);flex-shrink:0;position:relative;}
   .hero-mark::after{content:"";position:absolute;width:20px;height:20px;background:var(--amber);right:-10px;bottom:-10px;}
   .hero-text h1{font-size:38px;font-weight:700;letter-spacing:-0.5px;}
   .hero-role{font-size:16px;color:var(--indigo);font-weight:500;margin-top:6px;}
   .hero-contact{margin-top:16px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:16px;}
-  .hero-contact span{white-space:nowrap;}
-
-  /* Skills */
   .skills{margin-top:36px;}
   .skills h2{font-size:14px;font-weight:500;color:var(--muted);margin-bottom:12px;}
   .chip-row{display:flex;gap:10px;flex-wrap:wrap;}
   .chip{padding:7px 16px;border:1px solid var(--border);border-radius:20px;font-size:14px;background:var(--card);}
-
-  /* Section headers */
   .section{margin-top:56px;}
-  .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;}
+  .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
   .section-head h2{font-size:22px;}
   .section-head span{font-size:13px;color:var(--muted);}
-
-  /* Placeholder tiles */
   .grid{display:grid;gap:14px;}
-  .grid.posters{grid-template-columns:1.1fr 1fr;}
-  .grid.social{grid-template-columns:repeat(3,1fr);}
-  .grid.layout{grid-template-columns:1fr 1fr;}
-  .tile{
-    border:1.5px dashed #B9B7AD;
-    border-radius:6px;
-    background:#FAFAF8;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:var(--muted);
-    font-size:13px;
-    padding:18px;
-  }
-  .tile.tall{min-height:280px;}
-  .tile.short{min-height:220px;}
-  .tile.square{min-height:180px;}
-
-  /* About */
+  .grid.two{grid-template-columns:1fr 1fr;}
+  .grid.three{grid-template-columns:repeat(3,1fr);}
+  .cap{font-size:12px;color:var(--muted);margin-top:6px;}
+  img.piece{width:100%;border-radius:6px;display:block;border:1px solid var(--border);}
   .about p{font-size:15px;max-width:640px;color:#2c2c2a;}
-
-  /* Footer */
   footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--border);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-
   @media(max-width:600px){
-    .grid.social{grid-template-columns:1fr 1fr;}
-    .grid.posters,.grid.layout{grid-template-columns:1fr;}
+    .grid.three{grid-template-columns:1fr 1fr;}
+    .grid.two{grid-template-columns:1fr;}
     .hero-text h1{font-size:30px;}
   }
 </style>
@@ -96,7 +60,6 @@
         <span>Wello Sefer, Bole, Addis Ababa</span>
         <span>your.email@example.com</span>
         <span>+251 9__ ___ ___</span>
-        <span>Instagram / Behance handle</span>
       </div>
     </div>
   </div>
@@ -111,42 +74,57 @@
   </div>
 
   <div class="section">
-    <div class="section-head">
-      <h2>Poster design</h2>
-      <span>replace each tile with an image tag</span>
+    <div class="section-head"><h2>Posters</h2></div>
+    <div class="grid two">
+      <div><img class="piece" src="nightwave-poster.png" alt="Nightwave Sessions concert poster"><div class="cap">Concert poster — Nightwave Sessions</div></div>
+      <div><img class="piece" src="roots-brew-poster.png" alt="Roots and Brew coffee pop-up poster"><div class="cap">Event poster — Roots & Brew</div></div>
     </div>
-    <div class="grid posters">
-      <div class="tile tall">Add your best poster here<br>e.g. event or campaign poster</div>
-      <div class="tile tall">Add a second poster here</div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><h2>Social media campaign</h2></div>
+    <div class="grid three">
+      <div><img class="piece" src="nightwave-post1.png" alt="Nightwave announcement post"><div class="cap">Announcement post</div></div>
+      <div><img class="piece" src="nightwave-post2.png" alt="Nightwave lineup reveal post"><div class="cap">Lineup reveal post</div></div>
+      <div><img class="piece" src="nightwave-post3.png" alt="Nightwave countdown post"><div class="cap">Countdown post</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><h2>Layouts</h2></div>
+    <div class="grid two">
+      <div><img class="piece" src="greenpath-brochure.png" alt="GreenPath Consulting brochure"><div class="cap">One-page brochure — GreenPath Consulting</div></div>
+      <div><img class="piece" src="greenpath-slide.png" alt="GreenPath Consulting presentation slide"><div class="cap">Presentation slide — GreenPath Consulting</div></div>
     </div>
   </div>
 
   <div class="section">
     <div class="section-head">
-      <h2>Social media design</h2>
-      <span>square or vertical crops work best</span>
+      <h2>Branding & applied design</h2>
+      <span>brand systems, packaging, and business materials</span>
     </div>
-    <div class="grid social">
-      <div class="tile square">Post 1</div>
-      <div class="tile square">Post 2</div>
-      <div class="tile square">Post 3</div>
+    <div class="grid two">
+      <div><img class="piece" src="brand-board-ember-oak.png" alt="Ember and Oak brand board"><div class="cap">Brand identity board — Ember & Oak</div></div>
+      <div><img class="piece" src="neighborhood-cleanup-flyer.png" alt="Neighborhood cleanup flyer"><div class="cap">Community event flyer</div></div>
     </div>
-  </div>
-
-  <div class="section">
-    <div class="section-head">
-      <h2>Layout design</h2>
-      <span>brochures, documents, presentation slides</span>
+    <div class="grid two" style="margin-top:14px;">
+      <div><img class="piece" src="habesha-kitchen-menu.png" alt="Habesha Kitchen menu"><div class="cap">Restaurant menu — Habesha Kitchen</div></div>
+      <div><img class="piece" src="roots-brew-packaging.png" alt="Roots and Brew packaging"><div class="cap">Product packaging — Roots & Brew</div></div>
     </div>
-    <div class="grid layout">
-      <div class="tile short">Add a brochure or document layout</div>
-      <div class="tile short">Add a presentation slide layout</div>
+    <div class="grid three" style="margin-top:14px;">
+      <div><img class="piece" src="tech-talk-thumbnail.png" alt="Tech Talk YouTube thumbnail"><div class="cap">YouTube thumbnail</div></div>
+      <div><img class="piece" src="roots-brew-ad.png" alt="Roots and Brew social ad"><div class="cap">Social ad — Roots & Brew</div></div>
+      <div><img class="piece" src="greenpath-business-card.png" alt="GreenPath business card"><div class="cap">Business card — GreenPath</div></div>
+    </div>
+    <div class="grid two" style="margin-top:14px;">
+      <div><img class="piece" src="greenpath-linkedin-post.png" alt="GreenPath LinkedIn post"><div class="cap">LinkedIn post — GreenPath</div></div>
+      <div><img class="piece" src="sbu-basketball-branding.webp" alt="Snatchback University basketball team logo and branding"><div class="cap">Sports team logo & branding — Snatchback University (SBU)</div></div>
     </div>
   </div>
 
   <div class="section about">
     <div class="section-head"><h2>About</h2></div>
-    <p>Write two or three sentences about yourself: how you got into design, what kind of work you enjoy most, and what you're looking to grow into as a Junior Graphic Designer.</p>
+    <p>I got into graphic design through my interest in visual communication and creating designs that make ideas clear and engaging. I enjoy working on social media graphics, posters, branding, and digital content, and I'm looking to grow as a Junior Graphic Designer by improving my design skills, learning from experienced designers, and working on real projects.</p>
   </div>
 
   <footer>
